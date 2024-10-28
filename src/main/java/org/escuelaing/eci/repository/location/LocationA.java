@@ -20,7 +20,12 @@ public class LocationA implements Serializable {
     private String address;
 
 
-    public LocationA() {
+    public LocationA(LocationDto locationDto) {
+        this.id = null;
+        this.lat = locationDto.getLat();
+        this.lon = locationDto.getLon();
+        this.address = locationDto.getAddress();
+
     }
 
     public LocationA(String id, float lat, float lon, String address) {
@@ -60,6 +65,12 @@ public class LocationA implements Serializable {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public void update(LocationDto locationDto) {
+        this.lat = locationDto.getLat();
+        this.lon = locationDto.getLon();
+        this.address = locationDto.getAddress();
     }
 
     @Override
