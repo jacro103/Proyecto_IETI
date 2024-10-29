@@ -50,20 +50,5 @@ public class LoginUser implements Serializable{
         this.password = password;
     }
 
-    public List<User> getUserList(){
-        userList=userService.getAllUsuarios();
-        return userList;
-    }
-    public String login(){ 
-        User usuario = userRepository.findById(name); 
-        if(usuario == null || !usuario.getPassword().equals(password)){ 
-            FacesContext.getCurrentInstance().addMessage("@all", new FacesMessage(FacesMessage.SEVERITY_ERROR,"Los Datos No Coinciden",null)); 
-            return null; }else{ return "admin.xhtml"; } } 
-    
-    @Bean 
-    public CommandLineRunner establecerUsuarios() throws Exception{ 
-        return args -> { userService.addUsuario(new Usuario("sebastian", "123")); 
-        userService.getAllUsuarios().forEach(System.out::println); 
-        }; 
-    }
+ 
 }

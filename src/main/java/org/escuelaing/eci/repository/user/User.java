@@ -19,6 +19,8 @@ public class User implements Serializable {
     private String lastName;
     private String email;
     private String passwordHash;
+    
+
     private Date createdAt;
 
     public User() {
@@ -78,6 +80,10 @@ public class User implements Serializable {
 
     public void setPasswordHash(String passwordHash) {
         this.passwordHash = passwordHash;
+    }
+
+    public String getPasswordHash() {
+        return passwordHash;
     }
 
     public void update(UserDto userDto) {
