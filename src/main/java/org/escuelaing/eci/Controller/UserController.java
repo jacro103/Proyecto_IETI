@@ -73,19 +73,6 @@ public class UserController {
         return "Controller is working!";
     }
 
-    @PostMapping("/register")
-    public void register(@RequestBody User user) throws NoSuchAlgorithmException {
-        usersServiceMongoDb.register(user);
-    }
-
-    @PostMapping("/login")
-    public String login(@RequestBody User user) throws IOException, NoSuchAlgorithmException, InvalidKeySpecException, JOSEException {
-        return usersServiceMongoDb.login(user);
-    }
-
-    @GetMapping
-    public List<User> getPosts(){
-        return usersServiceMongoDb.all();
-    }
+    
 
 }
