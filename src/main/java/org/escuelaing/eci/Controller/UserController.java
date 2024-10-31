@@ -1,10 +1,8 @@
 package org.escuelaing.eci.Controller;
 
-import java.io.IOException;
-import java.security.NoSuchAlgorithmException;
-import java.security.spec.InvalidKeySpecException;
+
 import java.util.ArrayList;
-import java.util.List;
+
 import java.util.Optional;
 
 import org.escuelaing.eci.repository.user.User;
@@ -18,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.nimbusds.jose.JOSEException;
 
 
 
